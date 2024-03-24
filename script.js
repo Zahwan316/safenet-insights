@@ -250,3 +250,18 @@ function showElements(elements) {
 
 
 // popup 
+const btnmodal = document.querySelectorAll("#btn-modal")
+btnmodal.forEach(el => {
+  el.addEventListener('click', handleModal)
+})
+
+function handleModal(event){
+  console.log(event.target)
+  const id = event.target.getAttribute("data-id")
+  const modal = document.getElementById(`modal-${id}`)
+  const closebtn = document.getElementById(`close-${id}`)
+  modal.style.display = "flex"
+  closebtn.addEventListener('click', () => {
+    modal.style.display = "none"
+  })
+}
