@@ -21,20 +21,33 @@ body {
 
 /* navbar */
 
+
+
 nav {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 99;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: #ff85a2;
-  padding: 15px;
+  padding: 24px;
+  height:3.7em;
   border-radius: 0 0 5px 5px;
   color: #fcf6f5ff;
   box-shadow: 3px 3px 3px 3px rgb(0, 0, 0, 0.1);
   opacity: 1;
   transition: opacity 0.5s;
+  overflow: hidden;
+
+  /* width: 100%;
+  height: 4em;
+  background-color:pink;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed; */
 }
 
 nav .title a {
@@ -45,7 +58,8 @@ nav .title a {
 }
 
 nav .navbar {
-  margin-right: 20px;
+ /* margin-right: 20px; */
+ /* position: fixed; */
 }
 
 nav .navbar a {
@@ -349,7 +363,7 @@ lord-icon {
   width: 360px;
   height: 500px;
   margin: 20px;
-  border-radius: 20px;
+  border-radius: 8px;
   transition: 0.5s;
   cursor: pointer;
   overflow-y: hidden;
@@ -644,6 +658,7 @@ lord-icon {
   width: 70%;
   padding: 40px;
   text-align: left;
+  color:#eae8e8;
 }
 
 .isi1 span {
@@ -684,6 +699,7 @@ lord-icon {
   align-items: center;
   text-align: center;
   margin-bottom: 20px;
+  color:white
 }
 
 .iisi {
@@ -822,4 +838,611 @@ footer .copy {
   font-size: 12px;
   color: white;
   padding: 4px;
+}
+
+/* added code */
+#mobile-nav{
+  display: none;
+}
+
+#mobile-navbar{
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  top:65px;
+  display: none;
+  flex-direction: column;
+  z-index:999;
+  text-decoration: none;
+  padding:16px
+}
+
+#mobile-navbar a{
+  color: black;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+
+
+
+/* Responsive code */
+
+@media only screen and (min-width:280px) and (max-width:700px) {
+  #mobile-nav{
+    display: flex;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .container #satu,.container #dua{
+    width: 49%;
+  }
+
+  /* pusat bantuan page */
+  .pusat_bantuan{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ctr{
+    width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+   
+    flex-direction: column;
+  }
+
+  .category .ctr{
+    height: auto;
+  }
+
+  .category .other{
+    margin-bottom: 8px;
+  }
+
+  .category .other h3, lord-icon{
+    margin:0
+  }
+
+  .category .other{
+    display: flex;
+    align-items: center;
+  }
+
+  .category div p{
+    margin:0
+  }
+
+  .category{
+    padding:8px;
+    overflow-y: hidden;
+  }
+
+  .info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info lord-icon{
+    display: none;
+  }
+  /* end */
+
+  /* Kota Page */
+  .kota{
+    display: flex;
+    flex-wrap: wrap;
+    margin:0;
+    margin-top:16px;
+    padding:8px
+  }
+
+  .pilih{
+    width: 50%;
+  
+  }
+
+  .kota div{
+    margin:0
+  }
+
+  .kota h4::before{
+    content:""
+  }
+
+  .consult{
+    height: auto;
+  }
+
+  .consult .gambar,.consult .gambar3{
+    height:200px
+  }
+
+  .consult .deskripsi p,.consult .deskripsi h4{
+    margin:0
+  }
+
+  .consult .deskripsi{
+    padding:8px
+  }
+
+  .consult .deskripsi h4 i{
+    margin-right:8px
+  }
+
+  .consult .deskripsi h4{
+    font-size:1.1rem;    
+  }
+
+  .consult .deskripsi h4:nth-child(1){
+    margin-bottom:4px
+  }
+
+  .consult .deskripsi h4:nth-child(2){
+    margin-bottom:8px
+  }
+
+  .consult .deskripsi p{
+    font-size: 1rem;
+  }
+
+  .consult .deskripsi h4:nth-child(2){
+    display: flex;
+    align-items: center;
+  }
+
+  
+
+  /* end */
+
+  /* informasi 1*/
+    .nah{
+      padding:0
+    }
+
+    .nahloh{
+      margin:0;
+      padding:16px;
+      flex-direction: column;
+    }
+
+    .nahloh div{
+      width: 100%;
+    }
+
+    #img-player{
+      width: 100% !important;
+      height: 100% !important;
+    }
+  /* end  */
+
+
+  /* Cara kerja */
+    .txt2{
+      flex-direction: column;
+      padding:8px
+    }
+
+    .text4{
+      display: flex;
+      justify-content: center;
+    }
+
+    .txt5{
+      
+    }
+
+    .txt6{
+      width: 100px;
+      height: 40px;
+    }
+
+    .w-half{
+      width: 100%;
+    }
+
+    .w-half img{
+      width: 100%;
+    }
+  /*  */
+
+  /* Footer */
+    .footer{
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      background-color:transparent;
+      height: 30em;
+    }
+
+    .footer div{
+      width: 50% !important;
+    }
+  /* End Footer */
+
+
+  /* Informasi Page 2 */
+    .div1{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .img1{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .isi1{
+      width: 100%;
+    }
+
+    .isi1 p{
+      color:#eae8e8
+    }
+
+    .isi1 p:nth-child(2){
+      font-size: 1.1rem;
+    }
+    .isi1 p:nth-child(1){
+      margin-bottom:12px
+    }
+
+
+  /* end */
+
+  /* informasi box */
+    #p{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    #p i{
+      width: 100%;
+      text-align: center;
+      font-size:4em;
+      margin-bottom:12px
+    }
+
+    .div2{
+      flex-direction: column;
+    }
+
+    .div2 .isi2{
+      width: 100%;
+      max-width: 100%;
+      padding: 8px;
+      margin-bottom: 18px;
+    }
+
+    .div2 .img2{
+      max-width: 100%;
+    }
+
+    .div3{
+      padding:16px;
+      color:white
+    }
+
+    #title-p span{
+      font-size:2.2rem ;
+      
+    }
+
+    #title-p{
+      margin-bottom: 18px;
+    }
+
+    .isi3{
+      width: 100%;
+      padding:24px
+    }
+
+    .img3{
+      width: 100%;
+    }
+
+    #img-hukum{
+      width: 100% !important;
+      height: 100% !important;
+    }
+  /* end */
+}
+
+/* tablet mode */
+@media only screen and (min-width:700px) and (max-width:1024px){
+  .container #satu,.container #dua{
+    width: 49%;
+  }
+  #pusat_banutan{
+    display: flex;
+    justify-content: center;
+  }
+  .category{
+    padding:0;
+    height: auto;
+    overflow-y: hidden;
+  }
+
+  .nah{
+    padding:0
+  }
+
+  .nahloh{
+    flex-direction: column;
+  }
+
+  .nahloh div{
+    width: 100%;
+  }
+
+  .ctr{
+    width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+   
+    flex-direction: column;
+  }
+
+  .category .ctr{
+    height: auto;
+  }
+
+  .category .other{
+    margin-bottom: 8px;
+  }
+
+  .category .other h3, lord-icon{
+    margin:0
+  }
+
+  .category .other{
+    display: flex;
+    align-items: center;
+  }
+
+  .category div p{
+    margin:0
+  }
+
+  .category{
+    padding:8px;
+    overflow-y: hidden;
+  }
+
+  .info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info lord-icon{
+    display: none;
+  }
+  /* end */
+
+  /* Kota Page */
+  .kota{
+    display: flex;
+    flex-wrap: wrap;
+    margin:0;
+    margin-top:16px;
+    padding:8px
+  }
+
+  .pilih{
+    width: 50%;
+  
+  }
+
+  .kota div{
+    margin:0
+  }
+
+  .kota h4::before{
+    content:""
+  }
+
+  .consult{
+    height: auto;
+  }
+
+  .consult .gambar,.consult .gambar3{
+    height:200px
+  }
+
+  .consult .deskripsi p,.consult .deskripsi h4{
+    margin:0
+  }
+
+  .consult .deskripsi{
+    padding:8px
+  }
+
+  .consult .deskripsi h4 i{
+    margin-right:8px
+  }
+
+  .consult .deskripsi h4{
+    font-size:1.1rem;    
+  }
+
+  .consult .deskripsi h4:nth-child(1){
+    margin-bottom:4px
+  }
+
+  .consult .deskripsi h4:nth-child(2){
+    margin-bottom:8px
+  }
+
+  .consult .deskripsi p{
+    font-size: 1rem;
+  }
+
+  .consult .deskripsi h4:nth-child(2){
+    display: flex;
+    align-items: center;
+  }
+
+  
+
+  /* end */
+
+  /* informasi 1*/
+    .nah{
+      padding:0
+    }
+
+    .nahloh{
+      margin:0;
+      padding:16px;
+      flex-direction: column;
+    }
+
+    .nahloh div{
+      width: 100%;
+    }
+
+    #img-player{
+      width: 100% !important;
+      height: 100% !important;
+    }
+  /* end  */
+
+
+  /* Cara kerja */
+    .txt2{
+      flex-direction: column;
+      padding:8px
+    }
+
+    .txt5{
+      
+    }
+
+    .w-half{
+      width: 100%;
+    }
+
+    .w-half img{
+      width: 100%;
+    }
+  /*  */
+
+  /* Footer */
+    .footer{
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      background-color:transparent;
+      height: 30em;
+    }
+
+    .footer div{
+      width: 50% !important;
+    }
+  /* End Footer */
+
+
+  /* Informasi Page 2 */
+    .div1{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .img1{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .isi1{
+      width: 100%;
+    }
+
+    .isi1 p{
+      color:#eae8e8
+    }
+
+    .isi1 p:nth-child(2){
+      font-size: 1.1rem;
+    }
+    .isi1 p:nth-child(1){
+      margin-bottom:12px
+    }
+
+
+  /* end */
+
+  /* informasi box */
+    #p{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    #p i{
+      width: 100%;
+      text-align: center;
+      font-size:4em;
+      margin-bottom:12px
+    }
+
+    .div2{
+      flex-direction: column;
+    }
+
+    .div2 .isi2{
+      width: 100%;
+      max-width: 100%;
+      padding: 8px;
+      margin-bottom: 18px;
+    }
+
+    .div2 .img2{
+      max-width: 100%;
+    }
+
+    .div3{
+      padding:16px;
+      color:white
+    }
+
+    #title-p span{
+      font-size:2.2rem ;
+      
+    }
+
+    #title-p{
+      margin-bottom: 18px;
+    }
+
+    .isi3{
+      width: 100%;
+      padding:24px
+    }
+
+    .img3{
+      width: 100%;
+    }
+
+    #img-hukum{
+      width: 50% !important;
+      height: 50% !important;
+    }
+
+    .img3{
+      display: flex;
+      justify-content: center;
+    }
+  /* end */
 }

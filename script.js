@@ -1,6 +1,17 @@
 const categoryElements = document.querySelectorAll(".category .ctr");
 const city = document.getElementById("kota");
 const hasilSections = document.querySelectorAll(".hasil");
+const mobilenavbutton = document.getElementById("mobile-nav")
+const mobilenavbox = document.getElementById("mobile-navbar")
+
+mobilenavbutton.addEventListener("click", () => {
+  if(mobilenavbox.style.display === "none"){
+    mobilenavbox.style.display = "flex";
+  }
+  else{
+    mobilenavbox.style.display = "none";
+  }
+});
 
 function toggleHoverEffect(categoryElement, hasilSection) {
   categoryElement.classList.toggle("category-hover");
