@@ -894,7 +894,7 @@ footer .copy {
   border-radius:12px;
   width:50%;
   animation: modal-anim 0.3s ease-in-out;
-  
+  position: fixed;
 }
 
 .modal-title{
@@ -1339,6 +1339,7 @@ footer .copy {
 
   .consult{
     height: auto;
+    width: 340px;
   }
 
   .consult .gambar,.consult .gambar3{
